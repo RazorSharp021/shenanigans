@@ -6,3 +6,4 @@ def run_sql(sql, sql_params = [])
   db.close
   results
 end
+
