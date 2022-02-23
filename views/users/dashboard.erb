@@ -1,0 +1,13 @@
+
+
+<% event_items.each do |event| %>
+
+    <h2 class="event_name"><%= event['name'] %></h2>
+    <img class="cover" src="<%= event['image_url'] %>" alt="">
+
+    <form action="/event/<%= event['id'] %>" method="POST">
+        <input type="hidden" name="_method" value="delete">
+        <button>Delete</button>
+    </form>
+
+<% end %>

@@ -1,0 +1,33 @@
+
+<% if logged_in?() %>
+    <div class="top_bar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li id="about"><a href="/about">About</a></li>
+        </ul>
+        <form action="/sessions" method="POST">
+            <input type="hidden" name="_method" value="delete">
+            <button id="logout_button">Logout</button>
+        </form>
+    </div>
+    
+    <h1>Shℨn⍺nig⍺ns</h1>
+    <h3>Welcome! <%= current_user()['first_name'] %></h3>
+
+    <section class="events">
+        <% events.each do |event| %>
+            <form class="event" action="/event" method="POST">
+                <h2 class="event_name"><%= event['name'] %></h2>
+                <img class="cover" src="<%= event['image_url'] %>" title="source: imgur.com" />
+                <button>Add to profile</button>   
+            </form>
+        <% end %>
+    </section>
+
+<% else %>      
+    <h1>Shℨn⍺nig⍺ns</h1>
+    <h3> <a id="signup" href="new_user"> Sign Up </a>and  <a href="user_login" id="login"> Log in </a>to View the Upcoming Events in Sydney...</h3>    
+
+<% end %>
+

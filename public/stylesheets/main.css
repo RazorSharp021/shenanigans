@@ -1,23 +1,85 @@
 body {
     text-align: center;
+    background-color: #2C3D55; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: xxx-large;
+    font-family: 'Amita', cursive;
+    color: #FAA613;
+    font-style: italic;
+    text-shadow: 2px;
+}
+
+h2, h3 {
+    font-family: 'Amita';
+    color: #FAA613;
 }
 
 label {
     margin: 10px 0 10px 0;
+    color: #FAA613;
+    font-family: 'Amita';
+}
+
+a {
+    color: #BCD2EE;
+    text-decoration: none;
+}
+
+button {
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    margin-top: 0;
+    margin-left: -50px;
+}
+li {
+    margin: 0 5px;
+    border-right: 1px solid #BCD2EE;
+    padding-right: 10px;
+}
+#about {
+    border-right: none;
+}
+
+.top_bar {
+    width: 660px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#logout_button {
+    margin-top: 0;
 }
 
 .events {
+    width: 800px;
     display: flex;
     flex-direction: column;
     align-items : center;
+    /* border: 2px solid #0d1f22ff; */
+    /* background-color: burlywood; */
 }
 
 .event {
     max-width: 768px;
+    margin-bottom: 30px;
 }
 .cover {
     max-width: 700px;
+    border: 3px double darkorange;
+    border-style: groove;
 }
+
+
 
 /* new_user page  */
 .signup_form {
@@ -25,12 +87,15 @@ label {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 200px auto;
-    border: 1px solid black;
+    margin: 100px auto;
+    border: 3px double darkorange;
 }
 
 #signup_button {
     margin: 20px 0;
+    font-family: 'Amita';
+    color: #001b2eff;
+    background-color: darkgray;
 }
 
 /* user login */
@@ -40,9 +105,20 @@ label {
     flex-direction: column;
     align-items: center;
     margin: 200px auto;
-    border: 1px solid black;
+    border: 3px double darkorange;
 }
 
 #login_button {
     margin: 20px 0;
+    font-family: 'Amita';
+    color: #001b2eff;
+    background-color: darkgray;
 }
+
+/* CSS HEX */
+/* --dark-jungle-green: #0d1f22ff;
+--white: #fdfdffff;
+--blue-munsell: #3587a4ff;
+--mantis: #7acf5eff;
+--english-vermillion: #d64045ff; */
+
