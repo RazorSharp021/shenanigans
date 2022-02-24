@@ -1,13 +1,29 @@
-
-
-<% event_items.each do |event| %>
-
-    <h2 class="event_name"><%= event['name'] %></h2>
-    <img class="cover" src="<%= event['image_url'] %>" alt="">
-
-    <form action="/event/<%= event['id'] %>" method="POST">
+<div class="top_bar">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li id="about"><a href="/about">About</a></li>
+    </ul>
+    <form action="/sessions" method="POST">
         <input type="hidden" name="_method" value="delete">
-        <button>Delete</button>
+        <button id="logout_button">Logout</button>
     </form>
+</div>
 
-<% end %>
+<section class="events" id="dash_events">
+    <% events.each do |event| %>
+        <h2 class="event_name"><%= event['name'] %></h2>
+        <img class="cover" src="<%= event['image_url'] %>" title="source: imgur.com" />
+
+        <div class="ed_del">
+            <form class="buttons" action="/event/<%= event['id'] %>/edit">
+                <button id="edit_button">Edit</button>   
+            </form>
+            
+            <form class="buttons" action="/event/<%= event['id'] %>" method="POST">
+                <input type="hidden" name="_method" value="delete">
+                <button id="delete_button">Delete</button>   
+            </form>
+        </div>
+
+    <% end %>
+</section>

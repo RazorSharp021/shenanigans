@@ -1,4 +1,4 @@
-get '/user_login' do
+get '/new' do
   erb :'/sessions/new'
 end
 
@@ -14,7 +14,7 @@ post '/sessions' do
     
     redirect'/'
   else
-    redirect '/user_login'  
+    erb :'sessions/new'
   end
 end
 

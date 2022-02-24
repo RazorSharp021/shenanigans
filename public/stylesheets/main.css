@@ -8,26 +8,30 @@ body {
 
 h1 {
     font-size: xxx-large;
-    font-family: 'Amita', cursive;
+    font-family: 'Kufam', sans-se;
     color: #FAA613;
     font-style: italic;
     text-shadow: 2px;
 }
 
 h2, h3 {
-    font-family: 'Amita';
+    font-family: 'Kufam';
     color: #FAA613;
 }
 
 label {
     margin: 10px 0 10px 0;
     color: #FAA613;
-    font-family: 'Amita';
+    font-family: 'Kufam';
 }
 
 a {
     color: #BCD2EE;
     text-decoration: none;
+    font-family: 'Kufam';
+}
+a:hover {
+    color: aliceblue;
 }
 
 button {
@@ -40,11 +44,21 @@ ul {
     margin-top: 0;
     margin-left: -50px;
 }
+
 li {
     margin: 0 5px;
     border-right: 1px solid #BCD2EE;
     padding-right: 10px;
 }
+#dash_about {
+    border-right: none;
+}
+
+p {
+    color: #BCD2EE;
+    font-family: 'Kufam', sans-serif;
+}
+
 #about {
     border-right: none;
 }
@@ -58,15 +72,29 @@ li {
 
 #logout_button {
     margin-top: 0;
+    border: 1px solid #FAA613;
+    background-color: #2C3D55;
+    color: #BCD2EE;
+    font-family: 'Kufam'
 }
+
+#logout_button:hover {
+    background-color: #FAA613;
+    color: #2C3D55;
+}
+
 
 .events {
     width: 800px;
     display: flex;
     flex-direction: column;
     align-items : center;
-    /* border: 2px solid #0d1f22ff; */
-    /* background-color: burlywood; */
+    border: 2px solid #0d1f22ff;
+    background-color: darkslategray;
+}
+#list {
+    color: #FAA613;
+    margin-bottom: 80px;
 }
 
 .event {
@@ -77,8 +105,22 @@ li {
     max-width: 700px;
     border: 3px double darkorange;
     border-style: groove;
+    border-radius: 3px;
 }
-
+.cover:hover {
+    box-shadow: 10px 5px 5px #2C3D55;
+}
+.add_button {
+    border: 1px solid #FAA613;
+    background-color: #2C3D55;
+    color: #BCD2EE;
+    padding: 3px;
+    font-family: 'Kufam';
+}
+.add_button:hover {
+    background-color: #FAA613;
+    color: #2C3D55;
+}
 
 
 /* new_user page  */
@@ -89,13 +131,14 @@ li {
     align-items: center;
     margin: 100px auto;
     border: 3px double darkorange;
+    border-radius: 3px;
 }
 
 #signup_button {
     margin: 20px 0;
-    font-family: 'Amita';
+    font-family: 'Kufam';
     color: #001b2eff;
-    background-color: darkgray;
+    background-color: darkorange;
 }
 
 /* user login */
@@ -106,19 +149,96 @@ li {
     align-items: center;
     margin: 200px auto;
     border: 3px double darkorange;
+    border-radius: 3px;
 }
 
 #login_button {
     margin: 20px 0;
-    font-family: 'Amita';
+    font-family: 'Kufam';
     color: #001b2eff;
-    background-color: darkgray;
+    background-color: darkorange;
 }
 
-/* CSS HEX */
-/* --dark-jungle-green: #0d1f22ff;
---white: #fdfdffff;
---blue-munsell: #3587a4ff;
---mantis: #7acf5eff;
---english-vermillion: #d64045ff; */
+#dash_events {
+    margin-top: 100px;
+    border: none;
+}
 
+#delete_button, #edit_button, #up_btn {
+    width: 65px;
+    border: 1px solid #FAA613;
+    background-color: #2C3D55;
+    color: #BCD2EE;
+    padding: 3px;
+    font-family: 'Kufam';
+}
+#delete_button:hover {
+    background-color: #D64045;
+    color: #2C3D55;
+    border: 1px;
+}
+#edit_button:hover {
+    background-color: #FAA613;
+    color: #2C3D55;
+}
+#up_btn:hover {
+    color: #2C3D55;
+    background-color: chartreuse;
+}
+
+
+.ed_del {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    margin: 0 10px;
+}
+.error {
+    font-family: 'Amita';
+    color: #D64045;
+}
+
+@media only screen and (max-width: 800px) {
+    body{
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .events {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .event {
+        width: 100%;
+        align-items: center;
+    }
+    img {
+        width: 90%
+    }
+
+}
+
+@media only screen and (max-width: 670px) {
+    .top_bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    li {
+        margin-left: 22px;
+        border-right: none;
+    }
+}
