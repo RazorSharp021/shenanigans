@@ -2,6 +2,7 @@
 ### Event Finding/CRUD app
 
 This app allows the user to login and view and store details of an upcoming event in or near Sydney.
+[Click to view](https://www.example.com)
 
 ## My plan
 
